@@ -3,7 +3,7 @@ import {Directive, Input, EventEmitter, ElementRef, OnInit, OnChanges}         f
 import {DiffMatchPachService} from './dmp.service';
 
 @Directive({
-    selector: 'line-diff',
+    selector: '[line-diff]',
     providers: [
         DiffMatchPachService
     ]
