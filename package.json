@@ -1,0 +1,20 @@
+{
+    "name": "angular2-diff-match-patch",
+    "version": "1.0.0",
+    "description": "Angular2 port for https://github.com/amweiss/angular-diff-match-patch",
+    "scripts": {
+    },
+    "main": "angular-diff-match-patch.js",
+    "typings": "angular-diff-match-patch.d.ts",
+    "keywords": [
+        "angular2",
+        "diff-match-patch"
+    ],
+    "author": "aslubsky@gmail.com",
+    "license": "MIT",
+    "dependencies": {
+    },
+    "devDependencies": {
+        "angular2": "2.0.0-beta.17"
+    }
+}
