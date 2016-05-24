@@ -1,12 +1,8 @@
 declare var DIFF_INSERT;
 declare var DIFF_DELETE;
-declare var DiffMatchPatch;
+let DiffMatchPatch = (<any>window).diff_match_patch;
 
 export class DiffMatchPachService {
-    private static DiffMatchPatch;
-
-    //var DiffMatchPatch = $window.diff_match_patch;
-
     private static displayType:any = {
         INSDEL: 0,
         LINEDIFF: 1

@@ -1,4 +1,4 @@
-import {Directive, Input, EventEmitter, ElementRef, OnInit, OnChanges}         from 'angular2/core';
+import {Directive, Input, EventEmitter, ElementRef, OnInit, OnChanges}         from '@angular/core';
 
 import {DiffMatchPachService} from './dmp.service';
 
