@@ -1,4 +1,4 @@
-import {Directive, Input, EventEmitter, ElementRef, OnInit, OnChanges}         from '@angular/core';
+import {Directive, Input, SimpleChanges, ElementRef, OnInit, OnChanges}         from '@angular/core';
 
 import {DiffMatchPachService} from './dmp.service';
 
@@ -16,7 +16,7 @@ export class LineDiffComponent implements OnInit, OnChanges {
     constructor(private el:ElementRef, private dmp:DiffMatchPachService) {
     }
 
-    public ngOnChanges() {
+    public ngOnChanges(changes: SimpleChanges) {
         this.el.nativeElement.innerHTML = this.dmp.createLineDiffHtml(this.left, this.right, this.options);
     }
 

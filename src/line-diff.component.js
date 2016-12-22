@@ -7,7 +7,7 @@ var LineDiffComponent = (function () {
         this.dmp = dmp;
         this.options = {};
     }
-    LineDiffComponent.prototype.ngOnChanges = function () {
+    LineDiffComponent.prototype.ngOnChanges = function (changes) {
         this.el.nativeElement.innerHTML = this.dmp.createLineDiffHtml(this.left, this.right, this.options);
     };
     LineDiffComponent.prototype.ngOnInit = function () {
