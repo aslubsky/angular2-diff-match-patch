@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "target": "es5",
-        "module": "system",
+        "module": "commonjs",
         "moduleResolution": "node",
         "sourceMap": true,
         "declaration": true,
@@ -9,13 +9,17 @@
         "experimentalDecorators": true,
         "removeComments": false,
         "noImplicitAny": false,
+        "types": [
+            "es6-shim"
+        ],
         "outDir": "./dist",
-        "rootDir": "./src",
+        "rootDir": "./",
         "sourceRoot": "./"
     },
-    "exclude": [
-        "node_modules",
-        "typings/main",
-        "typings/main.d.ts"
-    ]
+    "files": [
+        "ng2-diff.module.ts"
+    ],
+    "angularCompilerOptions": {
+        "genDir": "./dist"
+    }
 }
