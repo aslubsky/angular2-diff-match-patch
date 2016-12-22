@@ -6,7 +6,7 @@
  /* tslint:disable */
 
 import * as import0 from '@angular/core/src/linker/ng_module_factory';
-import * as import1 from '../ng2-diff.module';
+import * as import1 from './ng2-diff.module';
 import * as import2 from '@angular/core/src/di/injector';
 class Ng2DiffModuleInjector extends import0.NgModuleInjector<import1.Ng2DiffModule> {
   _Ng2DiffModule_0:import1.Ng2DiffModule;

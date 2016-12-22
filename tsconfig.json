@@ -11,15 +11,9 @@
         "noImplicitAny": false,
         "types": [
             "es6-shim"
-        ],
-        "outDir": "./dist",
-        "rootDir": "./",
-        "sourceRoot": "./"
+        ]
     },
     "files": [
         "ng2-diff.module.ts"
-    ],
-    "angularCompilerOptions": {
-        "genDir": "./dist"
-    }
+    ]
 }
