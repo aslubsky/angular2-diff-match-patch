@@ -1,13 +1,12 @@
 "use strict";
-var DiffMatchPatch = window.diff_match_patch;
 var DiffMatchPachService = (function () {
     function DiffMatchPachService() {
     }
     DiffMatchPachService.prototype.diffClass = function (op) {
         switch (op) {
-            case DIFF_INSERT:
+            case window.diff_match_patch.DIFF_INSERT:
                 return 'ins';
-            case DIFF_DELETE:
+            case window.diff_match_patch.DIFF_DELETE:
                 return 'del';
             default:
                 return 'match';
@@ -15,9 +14,9 @@ var DiffMatchPachService = (function () {
     };
     DiffMatchPachService.prototype.diffSymbol = function (op) {
         switch (op) {
-            case DIFF_INSERT:
+            case window.diff_match_patch.DIFF_INSERT:
                 return '+';
-            case DIFF_DELETE:
+            case window.diff_match_patch.DIFF_DELETE:
                 return '-';
             default:
                 return ' ';
@@ -25,9 +24,9 @@ var DiffMatchPachService = (function () {
     };
     DiffMatchPachService.prototype.diffTag = function (op) {
         switch (op) {
-            case DIFF_INSERT:
+            case window.diff_match_patch.DIFF_INSERT:
                 return 'ins';
-            case DIFF_DELETE:
+            case window.diff_match_patch.DIFF_DELETE:
                 return 'del';
             default:
                 return 'span';
@@ -35,9 +34,9 @@ var DiffMatchPachService = (function () {
     };
     DiffMatchPachService.prototype.diffAttrName = function (op) {
         switch (op) {
-            case DIFF_INSERT:
+            case window.diff_match_patch.DIFF_INSERT:
                 return 'insert';
-            case DIFF_DELETE:
+            case window.diff_match_patch.DIFF_DELETE:
                 return 'delete';
             default:
                 return 'equal';
@@ -142,7 +141,7 @@ var DiffMatchPachService = (function () {
         var dmp;
         var diffs;
         if (this.assertArgumentsIsStrings(left, right)) {
-            dmp = new DiffMatchPatch();
+            dmp = new window.diff_match_patch.diff_match_patch();
             diffs = dmp.diff_main(left, right);
             return this.createHtmlFromDiffs(diffs, DiffMatchPachService.displayType.INSDEL, options);
         }
@@ -152,7 +151,7 @@ var DiffMatchPachService = (function () {
     //    var dmp;
     //    var diffs;
     //    if (assertArgumentsIsStrings(left, right)) {
-    //        dmp = new DiffMatchPatch();
+    //        dmp = new (<any>window).diff_match_patch();
     //        diffs = dmp.diff_main(left, right);
     //
     //        if (angular.isDefined(options) && angular.isDefined(options.editCost) && isFinite(options.editCost)) {
@@ -169,7 +168,7 @@ var DiffMatchPachService = (function () {
     //    var dmp;
     //    var diffs;
     //    if (assertArgumentsIsStrings(left, right)) {
-    //        dmp = new DiffMatchPatch();
+    //        dmp = new (<any>window).diff_match_patch();
     //        diffs = dmp.diff_main(left, right);
     //        dmp.diff_cleanupSemantic(diffs);
     //        return createHtmlFromDiffs(diffs, displayType.INSDEL, options);
@@ -181,7 +180,7 @@ var DiffMatchPachService = (function () {
         var chars;
         var diffs;
         if (this.assertArgumentsIsStrings(left, right)) {
-            dmp = new DiffMatchPatch();
+            dmp = new window.diff_match_patch.diff_match_patch();
             chars = dmp.diff_linesToChars_(left, right);
             diffs = dmp.diff_main(chars.chars1, chars.chars2, false);
             dmp.diff_charsToLines_(diffs, chars.lineArray);
