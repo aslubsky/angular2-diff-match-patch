@@ -12,12 +12,21 @@
   "author": "aslubsky@gmail.com",
   "license": "MIT",
   "dependencies": {},
+  "$schema": "./node_modules/ng-packagr/package.schema.json",
+  "ngPackage": {
+    "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
+    "lib": {
+      "entryFile": "ng2-diff.module.ts"
+    }
+  },
   "devDependencies": {
-    "@angular/compiler": "2.3.1",
-    "@angular/compiler-cli": "2.3.1",
-    "@angular/core": "2.3.1",
-    "@angular/platform-browser": "2.3.1",
-    "@types/es6-shim": "^0.31.32",
-    "rxjs": "^5.0.1"
+    "@angular/compiler": "~6.0.9",
+    "@angular/compiler-cli": "~6.0.9",
+    "@angular/core": "~6.0.9",
+    "@angular/platform-browser": "~6.0.9",
+    "@types/es6-shim": "^0.31.37",
+    "typescript": "~2.7.0",
+    "ng-packagr": "^3.0.3",
+    "rxjs": "^6.2.2"
   }
 }

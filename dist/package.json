@@ -1,0 +1,35 @@
+{
+  "name": "angular2-diff-match-patch",
+  "version": "1.0.0",
+  "description": "Angular2 port for https://github.com/amweiss/angular-diff-match-patch",
+  "main": "bundles/angular2-diff-match-patch.umd.js",
+  "typings": "angular2-diff-match-patch.d.ts",
+  "keywords": [
+    "angular2",
+    "diff-match-patch"
+  ],
+  "author": "aslubsky@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "tslib": "^1.9.0"
+  },
+  "$schema": "./node_modules/ng-packagr/package.schema.json",
+  "devDependencies": {
+    "@angular/compiler": "~6.0.9",
+    "@angular/compiler-cli": "~6.0.9",
+    "@angular/core": "~6.0.9",
+    "@angular/platform-browser": "~6.0.9",
+    "@types/es6-shim": "^0.31.37",
+    "typescript": "~2.7.0",
+    "ng-packagr": "^3.0.3",
+    "rxjs": "^6.2.2"
+  },
+  "module": "fesm5/angular2-diff-match-patch.js",
+  "es2015": "fesm2015/angular2-diff-match-patch.js",
+  "esm5": "esm5/angular2-diff-match-patch.js",
+  "esm2015": "esm2015/angular2-diff-match-patch.js",
+  "fesm5": "fesm5/angular2-diff-match-patch.js",
+  "fesm2015": "fesm2015/angular2-diff-match-patch.js",
+  "metadata": "angular2-diff-match-patch.metadata.json",
+  "sideEffects": false
+}

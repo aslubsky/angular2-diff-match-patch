@@ -1,0 +1,12 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * Generated bundle index. Do not edit.
+ */
+export { Ng2DiffModule } from './ng2-diff.module';
+export { DiffMatchPachService as ɵb } from './src/dmp.service';
+export { LineDiffComponent as ɵa } from './src/line-diff.component';
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYW5ndWxhcjItZGlmZi1tYXRjaC1wYXRjaC5qcyIsInNvdXJjZVJvb3QiOiJuZzovL2FuZ3VsYXIyLWRpZmYtbWF0Y2gtcGF0Y2gvIiwic291cmNlcyI6WyJhbmd1bGFyMi1kaWZmLW1hdGNoLXBhdGNoLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFJQSw4QkFBYyxtQkFBbUIsQ0FBQztBQUVsQyxPQUFPLEVBQUMsb0JBQW9CLElBQUksRUFBRSxFQUFDLE1BQU0sbUJBQW1CLENBQUM7QUFDN0QsT0FBTyxFQUFDLGlCQUFpQixJQUFJLEVBQUUsRUFBQyxNQUFNLDJCQUEyQixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBHZW5lcmF0ZWQgYnVuZGxlIGluZGV4LiBEbyBub3QgZWRpdC5cbiAqL1xuXG5leHBvcnQgKiBmcm9tICcuL25nMi1kaWZmLm1vZHVsZSc7XG5cbmV4cG9ydCB7RGlmZk1hdGNoUGFjaFNlcnZpY2UgYXMgybVifSBmcm9tICcuL3NyYy9kbXAuc2VydmljZSc7XG5leHBvcnQge0xpbmVEaWZmQ29tcG9uZW50IGFzIMm1YX0gZnJvbSAnLi9zcmMvbGluZS1kaWZmLmNvbXBvbmVudCc7Il19
