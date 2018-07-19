@@ -2,7 +2,9 @@
   "name": "angular2-diff-match-patch",
   "version": "1.0.0",
   "description": "Angular2 port for https://github.com/amweiss/angular-diff-match-patch",
-  "scripts": {},
+  "scripts": {
+      "build": "ng-packagr -p package.json"
+  },
   "main": "angular-diff-match-patch.js",
   "typings": "angular-diff-match-patch.d.ts",
   "keywords": [
@@ -16,7 +18,7 @@
   "ngPackage": {
     "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
     "lib": {
-      "entryFile": "ng2-diff.module.ts"
+      "entryFile": "src/index.ts"
     }
   },
   "devDependencies": {

@@ -1,4 +1,4 @@
-import {LineDiffComponent} from './src/line-diff.component';
+import {LineDiffComponent} from './line-diff.component';
 
 import {NgModule} from '@angular/core';
 
