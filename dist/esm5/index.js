@@ -1,9 +1,0 @@
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-export { Ng2DiffModule } from './ng2-diff.module';
-export { LineDiffComponent } from './line-diff.component';
-export { DiffMatchPachService } from './dmp.service';
-
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290Ijoibmc6Ly9hbmd1bGFyMi1kaWZmLW1hdGNoLXBhdGNoLyIsInNvdXJjZXMiOlsiaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7OztBQUFBLE9BQU8sRUFBQyxhQUFhLEVBQUMsTUFBTSxtQkFBbUIsQ0FBQztBQUNoRCxPQUFPLEVBQUMsaUJBQWlCLEVBQUMsTUFBTSx1QkFBdUIsQ0FBQztBQUN4RCxPQUFPLEVBQUMsb0JBQW9CLEVBQUMsTUFBTSxlQUFlLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQge05nMkRpZmZNb2R1bGV9IGZyb20gJy4vbmcyLWRpZmYubW9kdWxlJztcbmV4cG9ydCB7TGluZURpZmZDb21wb25lbnR9IGZyb20gJy4vbGluZS1kaWZmLmNvbXBvbmVudCc7XG5leHBvcnQge0RpZmZNYXRjaFBhY2hTZXJ2aWNlfSBmcm9tICcuL2RtcC5zZXJ2aWNlJztcbiJdfQ==

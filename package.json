@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Angular2 port for https://github.com/amweiss/angular-diff-match-patch",
   "scripts": {
-      "build": "ng-packagr -p package.json"
+    "build": "rm -rf dist && rm -rf dist-tmp/* && ngc && cp -r dist-tmp/src dist"
   },
   "main": "angular-diff-match-patch.js",
   "typings": "angular-diff-match-patch.d.ts",
@@ -14,21 +14,13 @@
   "author": "aslubsky@gmail.com",
   "license": "MIT",
   "dependencies": {},
-  "$schema": "./node_modules/ng-packagr/package.schema.json",
-  "ngPackage": {
-    "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
-    "lib": {
-      "entryFile": "src/index.ts"
-    }
-  },
   "devDependencies": {
     "@angular/compiler": "~6.0.9",
     "@angular/compiler-cli": "~6.0.9",
     "@angular/core": "~6.0.9",
     "@angular/platform-browser": "~6.0.9",
-    "@types/es6-shim": "^0.31.37",
+    "@types/node": "6.0.48",
     "typescript": "~2.7.0",
-    "ng-packagr": "^3.0.3",
     "rxjs": "^6.2.2"
   }
 }
