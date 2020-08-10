@@ -1,3 +1,5 @@
+import * as diff_match_patch from 'google-diff-match-patch/diff_match_patch_uncompressed';
+
 export class DiffMatchPachService {
     private static displayType:any = {
         INSDEL: 0,
@@ -6,9 +8,9 @@ export class DiffMatchPachService {
 
     private diffClass(op) {
         switch (op) {
-            case (<any>window).diff_match_patch.DIFF_INSERT:
+            case diff_match_patch.DIFF_INSERT:
                 return 'ins';
-            case (<any>window).diff_match_patch.DIFF_DELETE:
+            case diff_match_patch.DIFF_DELETE:
                 return 'del';
             default: // case DIFF_EQUAL:
                 return 'match';
@@ -17,9 +19,9 @@ export class DiffMatchPachService {
 
     private diffSymbol(op) {
         switch (op) {
-            case (<any>window).diff_match_patch.DIFF_INSERT:
+            case diff_match_patch.DIFF_INSERT:
                 return '+';
-            case (<any>window).diff_match_patch.DIFF_DELETE:
+            case diff_match_patch.DIFF_DELETE:
                 return '-';
             default: // case DIFF_EQUAL:
                 return ' ';
@@ -28,9 +30,9 @@ export class DiffMatchPachService {
 
     private diffTag(op) {
         switch (op) {
-            case (<any>window).diff_match_patch.DIFF_INSERT:
+            case diff_match_patch.DIFF_INSERT:
                 return 'ins';
-            case (<any>window).diff_match_patch.DIFF_DELETE:
+            case diff_match_patch.DIFF_DELETE:
                 return 'del';
             default: // case DIFF_EQUAL:
                 return 'span';
@@ -39,9 +41,9 @@ export class DiffMatchPachService {
 
     private diffAttrName(op) {
         switch (op) {
-            case (<any>window).diff_match_patch.DIFF_INSERT:
+            case diff_match_patch.DIFF_INSERT:
                 return 'insert';
-            case (<any>window).diff_match_patch.DIFF_DELETE:
+            case diff_match_patch.DIFF_DELETE:
                 return 'delete';
             default: // case DIFF_EQUAL:
                 return 'equal';
@@ -160,7 +162,7 @@ export class DiffMatchPachService {
         var dmp;
         var diffs;
         if (this.assertArgumentsIsStrings(left, right)) {
-            dmp = new (<any>window).diff_match_patch.diff_match_patch();
+            dmp = new diff_match_patch.diff_match_patch();
             diffs = dmp.diff_main(left, right);
             return this.createHtmlFromDiffs(diffs, DiffMatchPachService.displayType.INSDEL, options);
         }
@@ -171,7 +173,7 @@ export class DiffMatchPachService {
 //    var dmp;
 //    var diffs;
 //    if (assertArgumentsIsStrings(left, right)) {
-//        dmp = new (<any>window).diff_match_patch();
+//        dmp = new diff_match_patch();
 //        diffs = dmp.diff_main(left, right);
 //
 //        if (angular.isDefined(options) && angular.isDefined(options.editCost) && isFinite(options.editCost)) {
@@ -188,7 +190,7 @@ export class DiffMatchPachService {
 //    var dmp;
 //    var diffs;
 //    if (assertArgumentsIsStrings(left, right)) {
-//        dmp = new (<any>window).diff_match_patch();
+//        dmp = new diff_match_patch();
 //        diffs = dmp.diff_main(left, right);
 //        dmp.diff_cleanupSemantic(diffs);
 //        return createHtmlFromDiffs(diffs, displayType.INSDEL, options);
@@ -201,7 +203,7 @@ export class DiffMatchPachService {
         var chars;
         var diffs;
         if (this.assertArgumentsIsStrings(left, right)) {
-            dmp = new (<any>window).diff_match_patch.diff_match_patch();
+            dmp = new diff_match_patch.diff_match_patch();
             chars = dmp.diff_linesToChars_(left, right);
             diffs = dmp.diff_main(chars.chars1, chars.chars2, false);
             dmp.diff_charsToLines_(diffs, chars.lineArray);
