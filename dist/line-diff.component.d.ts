@@ -1,5 +1,6 @@
 import { SimpleChanges, ElementRef, OnInit, OnChanges } from '@angular/core';
 import { DiffMatchPachService } from './dmp.service';
+import * as i0 from "@angular/core";
 export declare class LineDiffComponent implements OnInit, OnChanges {
     private el;
     private dmp;
@@ -9,4 +10,6 @@ export declare class LineDiffComponent implements OnInit, OnChanges {
     constructor(el: ElementRef, dmp: DiffMatchPachService);
     ngOnChanges(changes: SimpleChanges): void;
     ngOnInit(): void;
+    static ɵfac: i0.ɵɵFactoryDef<LineDiffComponent, never>;
+    static ɵdir: i0.ɵɵDirectiveDefWithMeta<LineDiffComponent, "[line-diff]", never, { "left": "left"; "right": "right"; "options": "options"; }, {}, never>;
 }

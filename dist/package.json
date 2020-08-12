@@ -1,0 +1,27 @@
+{
+  "name": "angular2-diff-match-patch",
+  "version": "1.0.0",
+  "description": "Angular2 port for https://github.com/amweiss/angular-diff-match-patch",
+  "main": "bundles/angular2-diff-match-patch.umd.js",
+  "typings": "angular2-diff-match-patch.d.ts",
+  "keywords": [
+    "angular2",
+    "diff-match-patch"
+  ],
+  "author": "aslubsky@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "peerDependencies": {
+    "google-diff-match-patch": "git+https://github.com/davintoo/google-diff-match-patch.git"
+  },
+  "module": "fesm2015/angular2-diff-match-patch.js",
+  "es2015": "fesm2015/angular2-diff-match-patch.js",
+  "esm2015": "esm2015/angular2-diff-match-patch.js",
+  "fesm2015": "fesm2015/angular2-diff-match-patch.js",
+  "sideEffects": false,
+  "scripts": {
+    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy. This is not allowed.\\nPlease delete and rebuild the package, without compiling with Ivy, before attempting to publish.\\n')\" && exit 1"
+  }
+}

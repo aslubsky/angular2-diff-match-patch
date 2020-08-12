@@ -1,37 +1,28 @@
 {
-  "compilerOptions": {
-    "removeComments": true,
-    "noImplicitAny": false,
-    "noEmitOnError": true,
-    "strictNullChecks": true,
-    "module": "es2015",
-    "outDir": "dist-tmp",
-    "target": "es5",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "stripInternal": true,
-    "declaration": true,
-    "sourceMap": true,
-    "inlineSources": false,
-    "skipLibCheck": true,
-    "moduleResolution": "node",
-    "rootDir": "",
-    "baseUrl": "",
-    "lib": [
-      "dom",
-      "es2015"
-    ]
-  },
-  "angularCompilerOptions": {
-    "strictMetadataEmit": true,
-    "preserveWhitespaces": true
-  },
-  "exclude": [
-    "node_modules",
-    "dist-tmp",
-    "dist"
-  ],
-  "files": [
-    "./src/index.ts"
-  ]
+    "compileOnSave": false,
+    "compilerOptions": {
+        "baseUrl": "./",
+        "outDir": "./dist/out-tsc",
+        "sourceMap": true,
+        "declaration": false,
+        "downlevelIteration": true,
+        "experimentalDecorators": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "importHelpers": true,
+        "target": "es2015",
+        "lib": [
+            "es2018",
+            "dom"
+        ],
+        "paths": {
+            "angular2-diff-match-patch": [
+                "dist"
+            ]
+        }
+    },
+    "angularCompilerOptions": {
+        "fullTemplateTypeCheck": true,
+        "strictInjectionParameters": true
+    }
 }
