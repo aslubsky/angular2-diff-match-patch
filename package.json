@@ -4,8 +4,7 @@
   "description": "Angular2 port for https://github.com/amweiss/angular-diff-match-patch",
   "scripts": {
     "ng": "ng",
-    "build": "ng build angular2-diff-match-patch --prod",
-    "postinstall": "ngcc"
+    "build": "ng build angular2-diff-match-patch --prod"
   },
   "main": "angular-diff-match-patch.js",
   "typings": "angular-diff-match-patch.d.ts",
