@@ -4,14 +4,37 @@
     (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global['angular2-diff-match-patch'] = {}, global.ng.core, global.diff_match_patch));
 }(this, (function (exports, i0, diff_match_patch) { 'use strict';
 
+    function _interopNamespace(e) {
+        if (e && e.__esModule) return e;
+        var n = Object.create(null);
+        if (e) {
+            Object.keys(e).forEach(function (k) {
+                if (k !== 'default') {
+                    var d = Object.getOwnPropertyDescriptor(e, k);
+                    Object.defineProperty(n, k, d.get ? d : {
+                        enumerable: true,
+                        get: function () {
+                            return e[k];
+                        }
+                    });
+                }
+            });
+        }
+        n['default'] = e;
+        return Object.freeze(n);
+    }
+
+    var i0__namespace = /*#__PURE__*/_interopNamespace(i0);
+    var diff_match_patch__namespace = /*#__PURE__*/_interopNamespace(diff_match_patch);
+
     var DiffMatchPachService = /** @class */ (function () {
         function DiffMatchPachService() {
         }
         DiffMatchPachService.prototype.diffClass = function (op) {
             switch (op) {
-                case diff_match_patch.DIFF_INSERT:
+                case diff_match_patch__namespace.DIFF_INSERT:
                     return 'ins';
-                case diff_match_patch.DIFF_DELETE:
+                case diff_match_patch__namespace.DIFF_DELETE:
                     return 'del';
                 default: // case DIFF_EQUAL:
                     return 'match';
@@ -19,9 +42,9 @@
         };
         DiffMatchPachService.prototype.diffSymbol = function (op) {
             switch (op) {
-                case diff_match_patch.DIFF_INSERT:
+                case diff_match_patch__namespace.DIFF_INSERT:
                     return '+';
-                case diff_match_patch.DIFF_DELETE:
+                case diff_match_patch__namespace.DIFF_DELETE:
                     return '-';
                 default: // case DIFF_EQUAL:
                     return ' ';
@@ -29,9 +52,9 @@
         };
         DiffMatchPachService.prototype.diffTag = function (op) {
             switch (op) {
-                case diff_match_patch.DIFF_INSERT:
+                case diff_match_patch__namespace.DIFF_INSERT:
                     return 'ins';
-                case diff_match_patch.DIFF_DELETE:
+                case diff_match_patch__namespace.DIFF_DELETE:
                     return 'del';
                 default: // case DIFF_EQUAL:
                     return 'span';
@@ -39,9 +62,9 @@
         };
         DiffMatchPachService.prototype.diffAttrName = function (op) {
             switch (op) {
-                case diff_match_patch.DIFF_INSERT:
+                case diff_match_patch__namespace.DIFF_INSERT:
                     return 'insert';
-                case diff_match_patch.DIFF_DELETE:
+                case diff_match_patch__namespace.DIFF_DELETE:
                     return 'delete';
                 default: // case DIFF_EQUAL:
                     return 'equal';
@@ -146,7 +169,7 @@
             var dmp;
             var diffs;
             if (this.assertArgumentsIsStrings(left, right)) {
-                dmp = new diff_match_patch.diff_match_patch();
+                dmp = new diff_match_patch__namespace.diff_match_patch();
                 diffs = dmp.diff_main(left, right);
                 return this.createHtmlFromDiffs(diffs, DiffMatchPachService.displayType.INSDEL, options);
             }
@@ -185,7 +208,7 @@
             var chars;
             var diffs;
             if (this.assertArgumentsIsStrings(left, right)) {
-                dmp = new diff_match_patch.diff_match_patch();
+                dmp = new diff_match_patch__namespace.diff_match_patch();
                 chars = dmp.diff_linesToChars_(left, right);
                 diffs = dmp.diff_main(chars.chars1, chars.chars2, false);
                 dmp.diff_charsToLines_(diffs, chars.lineArray);
@@ -214,12 +237,12 @@
         };
         return LineDiffComponent;
     }());
-    LineDiffComponent.ɵfac = function LineDiffComponent_Factory(t) { return new (t || LineDiffComponent)(i0.ɵɵdirectiveInject(i0.ElementRef), i0.ɵɵdirectiveInject(DiffMatchPachService)); };
-    LineDiffComponent.ɵdir = i0.ɵɵdefineDirective({ type: LineDiffComponent, selectors: [["", "line-diff", ""]], inputs: { left: "left", right: "right", options: "options" }, features: [i0.ɵɵProvidersFeature([
+    LineDiffComponent.ɵfac = function LineDiffComponent_Factory(t) { return new (t || LineDiffComponent)(i0__namespace.ɵɵdirectiveInject(i0__namespace.ElementRef), i0__namespace.ɵɵdirectiveInject(DiffMatchPachService)); };
+    LineDiffComponent.ɵdir = /*@__PURE__*/ i0__namespace.ɵɵdefineDirective({ type: LineDiffComponent, selectors: [["", "line-diff", ""]], inputs: { left: "left", right: "right", options: "options" }, features: [i0__namespace.ɵɵProvidersFeature([
                 DiffMatchPachService
-            ]), i0.ɵɵNgOnChangesFeature] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(LineDiffComponent, [{
+            ]), i0__namespace.ɵɵNgOnChangesFeature] });
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(LineDiffComponent, [{
                 type: i0.Directive,
                 args: [{
                         selector: '[line-diff]',
@@ -227,7 +250,7 @@
                             DiffMatchPachService
                         ]
                     }]
-            }], function () { return [{ type: i0.ElementRef }, { type: DiffMatchPachService }]; }, { left: [{
+            }], function () { return [{ type: i0__namespace.ElementRef }, { type: DiffMatchPachService }]; }, { left: [{
                     type: i0.Input
                 }], right: [{
                     type: i0.Input
@@ -241,11 +264,11 @@
         }
         return Ng2DiffModule;
     }());
-    Ng2DiffModule.ɵmod = i0.ɵɵdefineNgModule({ type: Ng2DiffModule });
-    Ng2DiffModule.ɵinj = i0.ɵɵdefineInjector({ factory: function Ng2DiffModule_Factory(t) { return new (t || Ng2DiffModule)(); }, imports: [[]] });
-    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(Ng2DiffModule, { declarations: [LineDiffComponent], exports: [LineDiffComponent] }); })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(Ng2DiffModule, [{
+    Ng2DiffModule.ɵfac = function Ng2DiffModule_Factory(t) { return new (t || Ng2DiffModule)(); };
+    Ng2DiffModule.ɵmod = /*@__PURE__*/ i0__namespace.ɵɵdefineNgModule({ type: Ng2DiffModule });
+    Ng2DiffModule.ɵinj = /*@__PURE__*/ i0__namespace.ɵɵdefineInjector({ imports: [[]] });
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(Ng2DiffModule, [{
                 type: i0.NgModule,
                 args: [{
                         exports: [
@@ -258,6 +281,7 @@
                     }]
             }], null, null);
     })();
+    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0__namespace.ɵɵsetNgModuleScope(Ng2DiffModule, { declarations: [LineDiffComponent], exports: [LineDiffComponent] }); })();
 
     /**
      * Generated bundle index. Do not edit.

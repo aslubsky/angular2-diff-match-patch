@@ -10,6 +10,6 @@ export declare class LineDiffComponent implements OnInit, OnChanges {
     constructor(el: ElementRef, dmp: DiffMatchPachService);
     ngOnChanges(changes: SimpleChanges): void;
     ngOnInit(): void;
-    static ɵfac: i0.ɵɵFactoryDef<LineDiffComponent, never>;
-    static ɵdir: i0.ɵɵDirectiveDefWithMeta<LineDiffComponent, "[line-diff]", never, { "left": "left"; "right": "right"; "options": "options"; }, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<LineDiffComponent, never>;
+    static ɵdir: i0.ɵɵDirectiveDeclaration<LineDiffComponent, "[line-diff]", never, { "left": "left"; "right": "right"; "options": "options"; }, {}, never>;
 }

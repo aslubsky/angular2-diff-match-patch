@@ -1,12 +1,13 @@
-import { ɵɵdirectiveInject, ElementRef, ɵɵdefineDirective, ɵɵProvidersFeature, ɵɵNgOnChangesFeature, ɵsetClassMetadata, Directive, Input, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
-import { DIFF_DELETE, DIFF_INSERT, diff_match_patch } from 'google-diff-match-patch/diff_match_patch_uncompressed';
+import * as i0 from '@angular/core';
+import { Directive, Input, NgModule } from '@angular/core';
+import * as diff_match_patch from 'google-diff-match-patch/diff_match_patch_uncompressed';
 
 class DiffMatchPachService {
     diffClass(op) {
         switch (op) {
-            case DIFF_INSERT:
+            case diff_match_patch.DIFF_INSERT:
                 return 'ins';
-            case DIFF_DELETE:
+            case diff_match_patch.DIFF_DELETE:
                 return 'del';
             default: // case DIFF_EQUAL:
                 return 'match';
@@ -14,9 +15,9 @@ class DiffMatchPachService {
     }
     diffSymbol(op) {
         switch (op) {
-            case DIFF_INSERT:
+            case diff_match_patch.DIFF_INSERT:
                 return '+';
-            case DIFF_DELETE:
+            case diff_match_patch.DIFF_DELETE:
                 return '-';
             default: // case DIFF_EQUAL:
                 return ' ';
@@ -24,9 +25,9 @@ class DiffMatchPachService {
     }
     diffTag(op) {
         switch (op) {
-            case DIFF_INSERT:
+            case diff_match_patch.DIFF_INSERT:
                 return 'ins';
-            case DIFF_DELETE:
+            case diff_match_patch.DIFF_DELETE:
                 return 'del';
             default: // case DIFF_EQUAL:
                 return 'span';
@@ -34,9 +35,9 @@ class DiffMatchPachService {
     }
     diffAttrName(op) {
         switch (op) {
-            case DIFF_INSERT:
+            case diff_match_patch.DIFF_INSERT:
                 return 'insert';
-            case DIFF_DELETE:
+            case diff_match_patch.DIFF_DELETE:
                 return 'delete';
             default: // case DIFF_EQUAL:
                 return 'equal';
@@ -141,7 +142,7 @@ class DiffMatchPachService {
         var dmp;
         var diffs;
         if (this.assertArgumentsIsStrings(left, right)) {
-            dmp = new diff_match_patch();
+            dmp = new diff_match_patch.diff_match_patch();
             diffs = dmp.diff_main(left, right);
             return this.createHtmlFromDiffs(diffs, DiffMatchPachService.displayType.INSDEL, options);
         }
@@ -180,7 +181,7 @@ class DiffMatchPachService {
         var chars;
         var diffs;
         if (this.assertArgumentsIsStrings(left, right)) {
-            dmp = new diff_match_patch();
+            dmp = new diff_match_patch.diff_match_patch();
             chars = dmp.diff_linesToChars_(left, right);
             diffs = dmp.diff_main(chars.chars1, chars.chars2, false);
             dmp.diff_charsToLines_(diffs, chars.lineArray);
@@ -207,11 +208,11 @@ class LineDiffComponent {
         this.el.nativeElement.innerHTML = this.dmp.createLineDiffHtml(this.left, this.right, this.options);
     }
 }
-LineDiffComponent.ɵfac = function LineDiffComponent_Factory(t) { return new (t || LineDiffComponent)(ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(DiffMatchPachService)); };
-LineDiffComponent.ɵdir = ɵɵdefineDirective({ type: LineDiffComponent, selectors: [["", "line-diff", ""]], inputs: { left: "left", right: "right", options: "options" }, features: [ɵɵProvidersFeature([
+LineDiffComponent.ɵfac = function LineDiffComponent_Factory(t) { return new (t || LineDiffComponent)(i0.ɵɵdirectiveInject(i0.ElementRef), i0.ɵɵdirectiveInject(DiffMatchPachService)); };
+LineDiffComponent.ɵdir = /*@__PURE__*/ i0.ɵɵdefineDirective({ type: LineDiffComponent, selectors: [["", "line-diff", ""]], inputs: { left: "left", right: "right", options: "options" }, features: [i0.ɵɵProvidersFeature([
             DiffMatchPachService
-        ]), ɵɵNgOnChangesFeature] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(LineDiffComponent, [{
+        ]), i0.ɵɵNgOnChangesFeature] });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(LineDiffComponent, [{
         type: Directive,
         args: [{
                 selector: '[line-diff]',
@@ -219,7 +220,7 @@ LineDiffComponent.ɵdir = ɵɵdefineDirective({ type: LineDiffComponent, selecto
                     DiffMatchPachService
                 ]
             }]
-    }], function () { return [{ type: ElementRef }, { type: DiffMatchPachService }]; }, { left: [{
+    }], function () { return [{ type: i0.ElementRef }, { type: DiffMatchPachService }]; }, { left: [{
             type: Input
         }], right: [{
             type: Input
@@ -229,10 +230,10 @@ LineDiffComponent.ɵdir = ɵɵdefineDirective({ type: LineDiffComponent, selecto
 
 class Ng2DiffModule {
 }
-Ng2DiffModule.ɵmod = ɵɵdefineNgModule({ type: Ng2DiffModule });
-Ng2DiffModule.ɵinj = ɵɵdefineInjector({ factory: function Ng2DiffModule_Factory(t) { return new (t || Ng2DiffModule)(); }, imports: [[]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(Ng2DiffModule, { declarations: [LineDiffComponent], exports: [LineDiffComponent] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(Ng2DiffModule, [{
+Ng2DiffModule.ɵfac = function Ng2DiffModule_Factory(t) { return new (t || Ng2DiffModule)(); };
+Ng2DiffModule.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: Ng2DiffModule });
+Ng2DiffModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [[]] });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(Ng2DiffModule, [{
         type: NgModule,
         args: [{
                 exports: [
@@ -244,6 +245,7 @@ Ng2DiffModule.ɵinj = ɵɵdefineInjector({ factory: function Ng2DiffModule_Facto
                 imports: []
             }]
     }], null, null); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(Ng2DiffModule, { declarations: [LineDiffComponent], exports: [LineDiffComponent] }); })();
 
 /**
  * Generated bundle index. Do not edit.
